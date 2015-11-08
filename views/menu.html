@@ -1,0 +1,17 @@
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a href="#/"><img src="images/g3941-3-6-6.ceaa2a20.png" class="logo"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="js-navbar-collapse">
+    <ul class="nav navbar-nav" style="height: 51px;">
+        <li ng-repeat="data in $root.menu" ng-class="{'active': $root.isHashLocation('{{data.link}}')}">
+            <a href="{{data.link}}">{{data.name}}</a>
+        </li>
+    </ul>
+</div>

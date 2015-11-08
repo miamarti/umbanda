@@ -1,0 +1,36 @@
+<div class="row marketing">
+	<form class="form-inline" ng-submit="add()">
+		<div class="form-group">
+			<label class="sr-only" for="nome">Nome</label>
+			<input type="text" ng-model="cliente.nome" class="form-control" id="nome" placeholder="Nome" required>
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="fone">Telefone</label>
+			<input type="text" ng-model="cliente.fone" class="form-control" id="fone" placeholder="Telefone">
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="email">Email</label>
+			<input type="email" ng-model="cliente.email" class="form-control" id="email" placeholder="Email">
+		</div>
+		<button type="submit" class="btn btn-default">Incluir</button>
+	</form>
+</div>
+
+<div class="row marketing">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th ng-repeat="key in getClientesThead()">{{$root.captions[key]}}</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in clientes">
+				<td class="click" ng-repeat="key in getClientesThead()" ng-click="edit(data)">{{data[key]}}</td>
+				<td>
+					<span class="glyphicon glyphicon-trash" ng-click="remove(data)"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

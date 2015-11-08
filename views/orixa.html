@@ -1,0 +1,23 @@
+<div ng-include="'views/header.html'"></div>
+<div class="jumbotron orixa">
+  	<div class="orixa-name">
+      {{$root.orixas[key].name}}
+      <div class="close" ng-click="voltar()">X</div>
+    </div>
+    <div class="orixa-foto"><img src="{{$root.orixas[key].img}}"></div>
+    <div class="orixa-info">{{$root.orixas[key].info}}</div>
+
+    <div class="orixa-info" ng-show="$root.orixas[key].legioes">
+      7 Legiões:
+      <ul>
+        <li ng-repeat="data in $root.orixas[key].legioes" ng-show="data">{{data}}</li>
+      </ul>
+    </div>
+
+    <div class="orixa-info" ng-show="$root.orixas[key].youtube">
+      Ponto Cantado: 
+      <div class="embed-responsive embed-responsive-16by9">
+        <youtube-video video-id="$root.orixas[key].youtube"></youtube-video>
+      </div>
+    </div>
+</div>

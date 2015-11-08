@@ -1,0 +1,24 @@
+<div ng-include="'views/header.html'"></div>
+<div class="jumbotron">
+	<div style="text-align: left;">
+  		<h1>Os Sete Orixás</h1>
+  	</div>
+  	<div style="text-align: left;">
+  		<h2>Linhas ou Vibrações</h2>
+  	</div>
+  	<p class="lead">
+
+  		<div class="card" ng-repeat="data in $root.orixas" ng-click="open(data)">
+  			<div class="name">{{data.name}}</div>
+  			<div class="foto"><img src="{{data.img}}"></div>
+  			<hr>
+  			<div class="info">{{data.info}}</div>
+  			<div class="ref" ng-show="data.ref">
+  				<a href="{{data.ref}}" target="_blank">
+  					<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+  				</a>
+			</div>
+  		</div>
+
+  	</p>
+</div>
