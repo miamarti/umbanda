@@ -13,4 +13,9 @@ angular.module('umbanda').controller('OrixaCtrl', function ($rootScope, $scope, 
 	$scope.voltar = function(){
 		document.location.hash = '#/orixas';
 	};
+
+	$scope.$on('youtube.player.ended', function ($event, player) {
+	    // play it again
+	    player.playVideo();
+	});
 });

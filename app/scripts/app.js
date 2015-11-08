@@ -18,7 +18,8 @@ angular.module('umbanda', [
   'ngSanitize',
   'ngTouch',
   'firebase',
-  'ngSasGrid'
+  'ngSasGrid',
+  'youtube-embed'
 ]).config(function ($routeProvider) {
   $routeProvider
     .when('/', {

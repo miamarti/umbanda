@@ -14,12 +14,10 @@
       </ul>
     </div>
 
-    <div class="orixa-info">
-      Ponto Cantado:
+    <div class="orixa-info" ng-show="$root.orixas[key].youtube">
+      Ponto Cantado: 
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8RmD82zrnF0"></iframe>
+        <youtube-video video-id="$root.orixas[key].youtube"></youtube-video>
       </div>
     </div>
-
-    <iframe src="https://embed.spotify.com/?uri=spotify:track:08RJReUifEXY1aDR2TXr3g" width="100%" height="150" frameborder="0" allowtransparency="true"></iframe>
 </div>
