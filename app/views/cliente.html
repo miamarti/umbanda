@@ -1,0 +1,67 @@
+<div class="row marketing">
+	<form class="form-horizontal" ng-submit="save()">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="nome">Nome</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="cliente.nome" class="form-control" id="nome" placeholder="Nome" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="fone">Telefone</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="cliente.fone" class="form-control" id="fone" placeholder="Telefone">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="email">Email</label>
+			<div class="col-sm-10">
+				<input type="email" ng-model="cliente.email" class="form-control" id="email" placeholder="Email">
+			</div>
+		</div>
+	</form>
+</div>
+<hr>
+<div class="row marketing">
+	<ul class="nav nav-tabs">
+	  <li role="presentation" class="active"><a>Valores Pré-Aprovados</a></li>
+	  <li role="presentation"><a>Produtos / Compras</a></li>
+	</ul>
+
+	<div id="valores" class="row marketing">
+		<form class="form-inline" ng-submit="addValor()">
+			<div class="form-group">
+				<label class="sr-only" for="fone">Nome</label>
+				<input type="text" ng-model="produtoValor.nome" class="form-control" id="fone" placeholder="Nome" required>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="valorVista">Valor Vista</label>
+				<input type="number" step="any" ng-model="produtoValor.valorVista" class="form-control" id="valorVista" placeholder="Valor Vista" required>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="valorPrazo">Valor Prazo</label>
+				<input type="number" step="any" ng-model="produtoValor.valorPrazo" class="form-control" id="valorPrazo" placeholder="Valor Prazo" required>
+			</div>
+			<button type="submit" class="btn btn-default">Incluir</button>
+		</form>
+	</div>
+
+	<div class="row marketing">
+		<table class="table table-striped">
+			<tbody>
+				<tr ng-repeat="data in valores">
+					<td>{{data.nome}}</td>
+					<td>{{data.valorVista}}</td>
+					<td>{{data.valorPrazo}}</td>
+					<td>
+						<span class="glyphicon glyphicon-trash" ng-click="removeValor(data)"></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+<hr>
+<div class="row marketing">
+	<button type="button" ng-click="save()" class="btn btn-default">Salvar</button>
+</div>

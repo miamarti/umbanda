@@ -1,17 +1,13 @@
 'use strict';
+var Firebase = Firebase || {};
 
 /**
  * @ngdoc function
- * @name umbandaApp.controller:MainCtrl
+ * @name umbanda.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the umbandaApp
+ * Controller of the umbanda
  */
-angular.module('umbandaApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('umbanda').controller('MainCtrl', function ($rootScope, $scope) {
+    
+});
